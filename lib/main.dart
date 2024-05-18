@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:todoease/ui/home_page.dart';
+import 'package:todoease/ui/theme.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Lance',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-
-      ),
+      theme:Themes.light,
+      darkTheme: Themes.dark,
+      themeMode: ThemeMode.light,
+      
       home: HomePage()
     );
   }
